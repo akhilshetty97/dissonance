@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'DEGULAR';
+  src: url('../static/fonts/DegularDisplay-Bold.otf');
+}
+
+@font-face {
+  font-family: 'INPUT';
+  src: url('../static/fonts/InputMono-Thin.ttf');
+}
