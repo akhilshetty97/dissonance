@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import './Home.css'
 import Line from './Line.jsx'
 import Footer from './Footer.jsx'
@@ -15,12 +15,24 @@ function App() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showTextArea, setShowTextArea] = useState(null);
 
+  const videoSources = [consistency, conflict, turmoil, adaptation];
+
+  useEffect(() => {
+    videoSources.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'video';
+      link.href = src;
+      document.head.appendChild(link);
+    });
+  }, []);
+
   const handleVideoChange = (newSrc, id) => {
     setIsTransitioning(true);
     setTimeout(() => {
       setVid(newSrc);
       setIsTransitioning(false);
-    }, 200);
+    }, 300);
     setShowTextArea(id);
   }
   
@@ -28,7 +40,7 @@ function App() {
       <div className='w-full h-screen'>
         {/* <div className='overlay2'></div> */}
         <img className='overlay object-cover' src={texture} />
-        <video className={`w-full h-full object-cover mr-20 ${isTransitioning ? 'fade-out' : 'fade-in'}`} src={vid} autoPlay loop muted/>
+        <video className={`w-full h-full object-cover ${isTransitioning ? 'fade-out' : 'fade-in'}`} src={vid} autoPlay loop muted/>
         <div className='absolute w-full h-100 top-0'>
           <div className='font-degular-bold text-white text-4xl pt-20 text-center cursor-default'>DISSONANCE</div> 
           <div className='flex justify-around items-center pl-10' style={{ paddingTop: '60px' }}>
