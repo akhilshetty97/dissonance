@@ -5,10 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    objectPosition: {
+    },
     extend: {
       fontFamily:{
         'degular-bold': ['DEGULAR'],
-        'input-mono':['INPUT']
+        'degular-medium':['DEGULARMEDIUM'],
+        'input-mono':['INPUT'],
+        'input-mono-regular':['INPUTREGULAR'],
+        'input-mono-bold':['INPUTBOLD']
       }
     },
   },

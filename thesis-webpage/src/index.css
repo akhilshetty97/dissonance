@@ -8,6 +8,21 @@
 }
 
 @font-face {
+  font-family: 'DEGULARMEDIUM';
+  src: url('../static/fonts/DegularDisplay-Medium.otf');
+}
+
+@font-face {
   font-family: 'INPUT';
   src: url('../static/fonts/InputMono-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'INPUTREGULAR';
+  src: url('../static/fonts/InputMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'INPUTBOLD';
+  src: url('../static/fonts/InputMono-Bold.ttf');
 }

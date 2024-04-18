@@ -4,7 +4,7 @@ function Line() {
         <div
         style={{
           width: '1px', 
-          height: '350px',
+          height: '400px',
           background: `linear-gradient(to right, white 50%, transparent 50%)`, // Create a thin line using gradient
         }}
       ></div>
