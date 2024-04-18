@@ -26,8 +26,8 @@ function App() {
   
   return (
       <div className='w-full h-screen'>
-        {/* <div className='overlay'></div> */}
-        <img className='overlay2 object-cover' src={texture} />
+        {/* <div className='overlay2'></div> */}
+        <img className='overlay object-cover' src={texture} />
         <video className={`w-full h-full object-cover mr-20 ${isTransitioning ? 'fade-out' : 'fade-in'}`} src={vid} autoPlay loop muted/>
         <div className='absolute w-full h-100 top-0'>
           <div className='font-degular-bold text-white text-4xl pt-20 text-center cursor-default'>DISSONANCE</div> 
