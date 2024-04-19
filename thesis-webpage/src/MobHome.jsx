@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Footer from './Footer.jsx'
 import TextArea from './TextArea.jsx'
-import staticImg from './assets/mobile/staticImg.png'
-import adaptation from './assets/mobile/adaptation.png'
-import conflict from './assets/mobile/conflict.png'
-import consistency from './assets/mobile/consistency.png'
-import turmoil from './assets/mobile/turmoil.png'
+import staticImg from './assets/mobile/staticImg1.png'
+import adaptation from './assets/mobile/adaptation1.png'
+import conflict from './assets/mobile/conflict1.png'
+import consistency from './assets/mobile/consistency1.png'
+import turmoil from './assets/mobile/turmoil1.png'
 import texture from './assets/Texture.png'
 
 function MobHome() {
@@ -53,8 +53,8 @@ function MobHome() {
                             <TextArea line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
                         </div>
                     </div>
+                    <p className='text-white text-xs text-center font-input-mono ' style={{position:'absolute', bottom:'7rem'}}>SHREYA TALEGAONKAR</p>
                 </div>
-                <p className='text-white text-xs text-center font-input-mono ' style={{ position: 'absolute', bottom: '8rem', width: '100%' }}>SHREYA TALEGAONKAR</p>
             </div>
         </div>
     )
