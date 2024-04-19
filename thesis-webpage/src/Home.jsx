@@ -28,17 +28,18 @@ function App() {
   }, []);
 
   const handleVideoChange = (newSrc, id) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setVid(newSrc);
-      setIsTransitioning(false);
-    }, 300);
-    setShowTextArea(id);
+      if ( newSrc !== vid ) {
+        setIsTransitioning(true);
+        setTimeout(() => {
+          setVid(newSrc);
+          setIsTransitioning(false);
+        }, 300);
+      }
+      setShowTextArea(id);
   }
   
   return (
       <div className='w-full h-screen'>
-        {/* <div className='overlay2'></div> */}
         <img className='overlay object-cover' src={texture} />
         <video className={`w-full h-full object-cover ${isTransitioning ? 'fade-out' : 'fade-in'}`} src={vid} autoPlay loop muted/>
         <div className='absolute w-full h-100 top-0'>
