@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import LineNew from './LineNew.jsx'
 import Footer from './Footer.jsx'
 import TextArea from './TextArea.jsx'
 import staticImg from './assets/mobile/staticImg.png'
@@ -26,37 +25,36 @@ function MobHome() {
 
     return (
         <div className='w-full h-screen'>
-            <img className='overlay object-cover' src={texture} style={{position: 'absolute',top:0,left:0,width:'100%',height:'100vh',backgroundColor: 'rgba(0, 0, 0, 0.3)',zIndex: 0}}/>
+            <img className='overlay object-cover' src={texture} style={{position: 'absolute',top:0,left:0,width:'100%',height:'100vh',backgroundColor: 'rgba(0, 0, 0, 0.5)',zIndex: 0}}/>
             <img id='0' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out" src={staticImg} autoPlay loop muted />
             <img id='1' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={consistency} autoPlay loop muted />
             <img id='2' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict} autoPlay loop muted />
             <img id='3' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil} autoPlay loop muted />
             <img id='4' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
-            <div className='absolute w-full h-100 top-0'>
-                <div className='font-degular-bold text-white text-4xl text-center cursor-default' style={{paddingTop:'60px'}}>DISSONANCE</div> 
-                    <div className='flex justify-around' style={{paddingTop:'30px'}}>
-                        <div className='flex-col justify-center items-center' onClick={() => handleImageChange('1')}>
-                            <p className={`text-white text-xs text-center pt-20 ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
+            <div className='absolute w-full h-screen top-0'>
+                <div className='flex flex-col justify-center items-center'>
+                    <div className='font-degular-bold text-white text-4xl text-center' style={{paddingTop:'2.5rem'}}>DISSONANCE</div> 
+                    <Footer text={'CLICK TO ILLUMINATE THE DANCE OF THE MIND, UNRAVELING THE MYSTERIES OF THE HUMAN PSYCHE, ONE PHASE AT A TIME.'}/>
+                    <div className='phases flex-col' style={{paddingTop:'6rem'}}>
+                        <div className='flex-col' onClick={() => handleImageChange('1')} >
+                            <p className={`text-white text-xs text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
                             <TextArea line1={`//a low hum;`} line2={`An initial sense of <br/>order and equilibrium <br/>establishes a mental <br/> comfort zone.`} id={'1'} show={showTextArea}/>
                         </div>
-                        <LineNew/>
-                        <div className='flex-col items-center' onClick={() => handleImageChange('2')}>
-                            <p className={`text-white text-xs text-center pt-20 ${showTextArea==='2' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONFLICT</p>
+                        <div className='flex-col pt-10' onClick={() => handleImageChange('2')} >
+                            <p className={`text-white text-xs text-center ${showTextArea==='2' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONFLICT</p>
                             <TextArea line1={`//the crescendo`} line2={`Jarring contradictory<br/>stimuli intrude, <br/>generating profound<br/>tension and unease.`} id={'2'} show={showTextArea}/>
                         </div>
-                    </div>
-                    <div className='flex justify-around'>
-                        <div className='flex-col justify-center items-center' onClick={() => handleImageChange('3')}>
-                            <p className={`text-white text-xs text-center pt-20 ${showTextArea==='3' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>TURMOIL</p>
+                        <div className='flex-col pt-10' onClick={() => handleImageChange('3')} >
+                            <p className={`text-white text-xs text-center ${showTextArea==='3' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>TURMOIL</p>
                             <TextArea line1={`//the unraveling`} line2={`Opposing perspectives<br/>intensify into<br/>sensory overload and<br/>mental chaos.`} id={'3'} show={showTextArea}/>
                         </div>
-                        <LineNew/>
-                        <div className='flex-col items-center' onClick={() => handleImageChange('4')}>
-                            <p className={`text-white text-xs text-center pt-20 ${showTextArea==='4' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>ADAPTATION</p>
-                            <TextArea line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval,allowing new<br/>synthesis to take<br/>shape.`} id={'4'} show={showTextArea}/>
+                        <div className='flex-col pt-10' onClick={() => handleImageChange('4')} >
+                            <p className={`text-white text-xs text-center ${showTextArea==='4' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>ADAPTATION</p>
+                            <TextArea line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
                         </div>
-                    </div>  
-                    <Footer text={'CLICK TO ILLUMINATE THE DANCE OF THE MIND, UNRAVELING THE MYSTERIES OF THE HUMAN PSYCHE, ONE PHASE AT A TIME.'}/>
+                    </div>
+                </div>
+                <p className='text-white text-xs text-center font-input-mono ' style={{ position: 'absolute', bottom: '8rem', width: '100%' }}>SHREYA TALEGAONKAR</p>
             </div>
         </div>
     )
