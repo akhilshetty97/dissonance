@@ -11,56 +11,48 @@ import turmoil from './assets/TURMOIL.mp4'
 import texture from './assets/Texture.png'
 
 function App() {
-  const [vid, setVid] = useState(staticVideo);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [showTextArea, setShowTextArea] = useState(null);
-
-  const videoSources = [consistency, conflict, turmoil, adaptation];
-
-  useEffect(() => {
-    videoSources.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'video';
-      link.href = src;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const handleVideoChange = (newSrc, id) => {
-      if ( newSrc !== vid ) {
-        setIsTransitioning(true);
-        setTimeout(() => {
-          setVid(newSrc);
-          setIsTransitioning(false);
-        }, 300);
+ 
+  const handleVideoChange = (id) => {    
+    // Show the video element with the corresponding id and hide others
+    const videoElements = document.querySelectorAll('video');
+    videoElements.forEach(video => {
+      if (video.id === id) {
+        video.classList.remove('hidden');
+      } else {
+        video.classList.add('hidden');
       }
-      setShowTextArea(id);
+    });
+    setShowTextArea(id);
   }
   
   return (
       <div className='w-full h-screen'>
         <img className='overlay object-cover' src={texture} />
-        <video className={`w-full h-full object-cover ${isTransitioning ? 'fade-out' : 'fade-in'}`} src={vid} autoPlay loop muted/>
+        <video id='0' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out" src={staticVideo} autoPlay loop muted />
+        <video id='1' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={consistency} autoPlay loop muted />
+        <video id='2' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict} autoPlay loop muted />
+        <video id='3' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil} autoPlay loop muted />
+        <video id='4' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
         <div className='absolute w-full h-100 top-0'>
           <div className='font-degular-bold text-white text-4xl pt-20 text-center cursor-default'>DISSONANCE</div> 
           <div className='flex justify-around items-center pl-10' style={{ paddingTop: '60px' }}>
-            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange(consistency, '1')} onMouseLeave={() => setShowTextArea(false)}>
+            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('1')} onMouseLeave={() => setShowTextArea(false)}>
               <p className={`text-white text-xs text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
               <TextArea line1={`//a low hum;`} line2={`An initial sense of <br/>order and equilibrium <br/>establishes a mental <br/> comfort zone.`} id={'1'} show={showTextArea}/>
             </div>
             <Line/>
-            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange(conflict, '2')} onMouseLeave={() => setShowTextArea(false)}>
+            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('2')} onMouseLeave={() => setShowTextArea(false)}>
               <p className={`text-white text-xs text-center ${showTextArea==='2' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONFLICT</p>
               <TextArea line1={`//the crescendo`} line2={`Jarring contradictory<br/>stimuli intrude, <br/>generating profound<br/>tension and unease.`} id={'2'} show={showTextArea}/>
             </div>
             <Line/>
-            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange(turmoil, '3')} onMouseLeave={() => setShowTextArea(false)}>
+            <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('3')} onMouseLeave={() => setShowTextArea(false)}>
               <p className={`text-white text-xs text-center ${showTextArea==='3' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>TURMOIL</p>
               <TextArea line1={`//the unraveling`} line2={`Opposing perspectives<br/>intensify into<br/>sensory overload and<br/>mental chaos.`} id={'3'} show={showTextArea}/>
             </div>
             <Line/>
-            <div className='flex-col items-center pr-8' onMouseEnter={() => handleVideoChange(adaptation, '4')} onMouseLeave={() => setShowTextArea(false)}>
+            <div className='flex-col items-center pr-8' onMouseEnter={() => handleVideoChange('4')} onMouseLeave={() => setShowTextArea(false)}>
               <p className={`text-white text-xs text-center ${showTextArea==='4' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>ADAPTATION</p>
               <TextArea line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
             </div>
@@ -72,3 +64,4 @@ function App() {
 }
 
 export default App;
+
