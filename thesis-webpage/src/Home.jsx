@@ -28,15 +28,15 @@ function App() {
   
   return (
       <div className='w-full h-screen'>
-        <img className='overlay object-cover' src={texture} />
+        <img className='absolute overlay object-cover' src={texture} />
         <video id='0' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out" src={staticVideo} autoPlay loop muted />
         <video id='1' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={consistency} autoPlay loop muted />
         <video id='2' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict} autoPlay loop muted />
         <video id='3' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil} autoPlay loop muted />
         <video id='4' className="w-full h-full object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
-        <div className='absolute w-full h-100 top-0'>
+        <div className='absolute w-full min-h-screen top-0'>
           <div className='font-degular-bold text-white text-4xl pt-20 text-center cursor-default'>DISSONANCE</div> 
-          <div className='flex justify-around items-center pl-10' style={{ paddingTop: '4rem' }}>
+          <div className='flex justify-around items-center pl-10 pt-32'>
             <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('1')} onMouseLeave={() => setShowTextArea(false)}>
               <p className={`text-white text-xs text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
               <TextArea line1={`//a low hum;`} line2={`An initial sense of <br/>order and equilibrium <br/>establishes a mental <br/> comfort zone.`} id={'1'} show={showTextArea}/>
