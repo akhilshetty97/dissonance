@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Footer from './Footer.jsx'
+import FooterMob from './FooterMob.jsx'
 import TextAreaMob from './TextAreaMob.jsx'
 import staticImg from './assets/mobile/staticImg1.png'
 import adaptation from './assets/mobile/adaptation1.png'
@@ -34,7 +34,7 @@ function MobHome() {
             <div className='absolute w-full h-screen top-0'>
                 <div className='flex flex-col justify-center items-center'>
                     <div className='font-degular-bold text-white text-4xl text-center' style={{paddingTop:'2.5rem'}}>DISSONANCE</div> 
-                    <Footer text={'CLICK TO ILLUMINATE THE DANCE OF THE MIND, UNRAVELING THE MYSTERIES OF THE HUMAN PSYCHE, ONE PHASE AT A TIME.'}/>
+                    <FooterMob text={'CLICK TO ILLUMINATE THE DANCE OF THE MIND, UNRAVELING THE MYSTERIES OF THE HUMAN PSYCHE, ONE PHASE AT A TIME.'}/>
                     <div className='phases flex-col' style={{paddingTop:'6rem'}}>
                         <div className='flex-col' onClick={() => handleImageChange('1')} >
                             <p className={`text-white text-xs text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
