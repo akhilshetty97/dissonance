@@ -34,26 +34,26 @@ function App() {
         <video id='2' className="w-full min-h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict} autoPlay loop muted />
         <video id='3' className="w-full min-h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil} autoPlay loop muted />
         <video id='4' className="w-full min-h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
-        <div className='absolute w-full min-h-screen top-0'>
-          <div className='font-degular-bold text-white text-4xl pt-20 text-center cursor-default'>DISSONANCE</div> 
+        <div className='absolute w-full min-h-screen top-2'>
+          <div className='font-degular-bold text-white text-5xl pt-20 text-center cursor-default'>DISSONANCE</div> 
           <div className='flex justify-around items-center pl-10 pt-20'>
             <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('1')} onMouseLeave={() => setShowTextArea(false)}>
-              <p className={`text-white text-xs text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
+              <p className={`text-white text-sm text-center ${showTextArea==='1' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONSISTENCY</p>
               <TextArea line1={`//a low hum;`} line2={`An initial sense of <br/>order and equilibrium <br/>establishes a mental <br/> comfort zone.`} id={'1'} show={showTextArea}/>
             </div>
             <Line/>
             <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('2')} onMouseLeave={() => setShowTextArea(false)}>
-              <p className={`text-white text-xs text-center ${showTextArea==='2' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONFLICT</p>
+              <p className={`text-white text-sm text-center ${showTextArea==='2' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>CONFLICT</p>
               <TextArea line1={`//the crescendo`} line2={`Jarring contradictory<br/>stimuli intrude, <br/>generating profound<br/>tension and unease.`} id={'2'} show={showTextArea}/>
             </div>
             <Line/>
             <div className='flex-col items-center' onMouseEnter={() => handleVideoChange('3')} onMouseLeave={() => setShowTextArea(false)}>
-              <p className={`text-white text-xs text-center ${showTextArea==='3' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>TURMOIL</p>
+              <p className={`text-white text-sm text-center ${showTextArea==='3' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>TURMOIL</p>
               <TextArea line1={`//the unraveling`} line2={`Opposing perspectives<br/>intensify into<br/>sensory overload and<br/>mental chaos.`} id={'3'} show={showTextArea}/>
             </div>
             <Line/>
             <div className='flex-col items-center pr-8' onMouseEnter={() => handleVideoChange('4')} onMouseLeave={() => setShowTextArea(false)}>
-              <p className={`text-white text-xs text-center ${showTextArea==='4' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>ADAPTATION</p>
+              <p className={`text-white text-sm text-center ${showTextArea==='4' ? 'font-input-mono-bold cursor-default':'font-input-mono'}`}>ADAPTATION</p>
               <TextArea line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
             </div>
           </div> 
