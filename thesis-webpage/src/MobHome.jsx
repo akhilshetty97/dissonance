@@ -53,7 +53,7 @@ function MobHome() {
                             <TextAreaMob line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
                         </div>
                     </div>
-                    <p className='text-white text-xs text-center font-input-mono ' style={{position:'absolute', bottom:'7rem'}}>SHREYA TALEGAONKAR</p>
+                    <a href="https://shreyatalegaonkar.com" className='text-white text-xs text-center font-input-mono ' style={{position:'absolute', bottom:'10rem'}}>shreyatalegaonkar.com</a>
                 </div>
             </div>
         </div>
