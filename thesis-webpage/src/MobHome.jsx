@@ -33,7 +33,7 @@ function MobHome() {
             <img id='4' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
             <div className='absolute w-full h-screen top-0'>
                 <div className='flex flex-col justify-center items-center'>
-                    <div className='font-degular-bold text-white text-4xl text-center' style={{paddingTop:'2.5rem'}}>DISSONANCE</div> 
+                    <div className='font-degular-bold text-4xl text-center' style={{paddingTop:'2.5rem', color: '#F1F1F1'}}>DISSONANCE</div> 
                     <FooterMob text={'CLICK TO ILLUMINATE THE DANCE OF THE MIND, UNRAVELING THE MYSTERIES OF THE HUMAN PSYCHE, ONE PHASE AT A TIME.'}/>
                     <div className='phases flex-col' style={{paddingTop:'6rem'}}>
                         <div className='flex-col' onClick={() => handleImageChange('1')} >
@@ -53,7 +53,7 @@ function MobHome() {
                             <TextAreaMob line1={`//reconciliation;`} line2={`A fragile resolution<br/>emerges from the<br/>upheaval, allowing new<br/>synthesis to take shape.`} id={'4'} show={showTextArea}/>
                         </div>
                     </div>
-                    <a href="https://shreyatalegaonkar.com" className='text-white text-xs text-center font-input-mono ' style={{position:'absolute', bottom:'10rem'}}>shreyatalegaonkar.com</a>
+                    <a href="https://shreyatalegaonkar.com" className='text-xs text-center font-input-mono-bold' style={{position:'absolute', bottom:'10rem', color: '#F1F1F1'}}>shreyatalegaonkar.com</a>
                 </div>
             </div>
         </div>
