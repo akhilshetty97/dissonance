@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import FooterMob from './FooterMob.jsx'
 import TextAreaMob from './TextAreaMob.jsx'
-import staticImg from './assets/mobile/staticImg1.png'
-import adaptation from './assets/mobile/adaptation1.png'
-import conflict from './assets/mobile/conflict1.png'
-import consistency from './assets/mobile/consistency1.png'
-import turmoil from './assets/mobile/turmoil1.png'
-import texture from './assets/Texture.png'
+import staticImg1 from './assets/mobile/staticImg1.png'
+import adaptation1 from './assets/mobile/adaptation1.png'
+import conflict1 from './assets/mobile/conflict1.png'
+import consistency1 from './assets/mobile/consistency1.png'
+import turmoil1 from './assets/mobile/turmoil1.png'
+import texture1 from './assets/Texture.png'
 
 function MobHome() {
     const [showTextArea, setShowTextArea] = useState(null);
@@ -25,12 +25,12 @@ function MobHome() {
 
     return (
         <div className='w-full h-screen'>
-            <img className='overlay object-cover' src={texture} style={{position: 'absolute',top:0,left:0,width:'100%',height:'100vh',backgroundColor: 'rgba(0, 0, 0, 0.5)',zIndex: 0}}/>
-            <img id='0' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out" src={staticImg} autoPlay loop muted />
-            <img id='1' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={consistency} autoPlay loop muted />
-            <img id='2' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict} autoPlay loop muted />
-            <img id='3' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil} autoPlay loop muted />
-            <img id='4' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation} autoPlay loop muted />
+            <img className='overlay object-cover' src={texture1} style={{position: 'absolute',top:0,left:0,width:'100%',height:'100vh',backgroundColor: 'rgba(0, 0, 0, 0.5)',zIndex: 0}}/>
+            <img id='0' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out" src={staticImg1}/>
+            <img id='1' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={consistency1}/>
+            <img id='2' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={conflict1}/>
+            <img id='3' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={turmoil1}/>
+            <img id='4' className="bgImg w-full h-screen object-cover transition-opacity duration-500 ease-in-out hidden" src={adaptation1}/>
             <div className='absolute w-full h-screen top-0'>
                 <div className='flex flex-col justify-center items-center'>
                     <div className='font-degular-bold text-4xl text-center' style={{paddingTop:'2.5rem', color: '#F1F1F1'}}>DISSONANCE</div> 

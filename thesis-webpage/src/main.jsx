@@ -4,13 +4,11 @@ import Home from './Home.jsx'
 import MobHome from './MobHome.jsx'
 import './index.css'
 
+const isMobile = window.innerWidth < 768;
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="hidden md:block">
-      <Home />
-    </div>
-    <div className="block md:hidden">
-      <MobHome />
-    </div>
-  </React.StrictMode>,
-)
+    {isMobile ? <MobHome /> : null}
+    {!isMobile ? <Home /> : null}
+  </React.StrictMode>
+);
